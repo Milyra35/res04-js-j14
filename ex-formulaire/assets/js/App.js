@@ -15,14 +15,12 @@ export default {
         taskDone(event) {
             if (this.done === true)
             {
-                let btnDone = document.querySelectorAll("#app ul li button");
+                let btnDone = document.querySelector("#app ul li button");
 
-                for (let btn of btnDone)
-                {
-                    let click = event.target;
+                btnDone.addEventListener("click", function(event) {
                     let task = document.querySelector("#app ul li");
                     task.style.textDecoration = "line-through";
-                }
+                })
             }
         }  
     }  
