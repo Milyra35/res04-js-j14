@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <section id="app">  
+            <h2>Tâches</h2>  
+            <ul>        
+                <li v-for="task in tasks">  
+                    {{ task }}
+                    <button @click="taskDone">Fini</button>  
+                </li>  
+            </ul>    
+            <form @submit.prevent="addTask">  
+                <fieldset>            
+                    <label for="task">Saisir la tâche</label>  
+                    <input type="text" name="task" id="task" />  
+                </fieldset>        
+                <button type="submit">Ajouter</button>  
+            </form>
+        </section>
+
+        <script type="module" src="assets/js/index.js"></script>
+    </body>
+</html>

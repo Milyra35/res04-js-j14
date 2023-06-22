@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JS</title>
+</head>
+<body>
+    <section id="app">
+        <h1 v-if="animal === 'Dogs'">Dogs</h1>
+        <h1 v-else-if="animal === 'Cats'">Cats</h1>
+        <h1 v-else>Not Dogs or Cats</h1>
+        <button @click="change">Changer d'animal</button>
+    </section>
+
+    <ul id="app2">
+        <template v-for="number of numbers">
+            <li v-if="number%2 === 0" style="color:red">{{ number }}</li>
+            <li v-else style="color:blue">{{ number }}</li>
+        </template>
+    </ul>
+
+    <script type="module" src="assets/js/index.js"></script>
+</body>
+</html>
