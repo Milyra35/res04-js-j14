@@ -9,7 +9,7 @@
             <h2>Tâches</h2>  
             <ul>        
                 <li v-for="task in tasks">  
-                    {{ task }}
+                    <p style="display:inline-block">{{ task }}</p>
                     <button @click="taskDone">Fini</button>  
                 </li>  
             </ul>    

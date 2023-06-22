@@ -15,10 +15,11 @@ export default {
         taskDone(event) {
             if (this.done === true)
             {
-                let btnDone = document.querySelector("#app ul li button");
+                let ul = document.querySelector("#app ul");
 
-                btnDone.addEventListener("click", function(event) {
-                    let task = document.querySelector("#app ul li");
+                ul.addEventListener("click", function(event) {
+                    let li = event.target.parentElement;
+                    let task = li.querySelector("p");
                     task.style.textDecoration = "line-through";
                 })
             }
